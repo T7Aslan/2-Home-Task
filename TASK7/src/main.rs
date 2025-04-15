@@ -2,11 +2,11 @@
 
 fn main() {
     let kortesh: (i32, i32) = (81, 12);
-    let (a, b) = kortesh;
-    let c = tuple_sum(a, b);
-    println!("Принимает кортеж из двух целых чисел {}, {}. Возвращает целое число, равное сумме чисел во входном кортеже,{} ", a, b, c);
+    let kortesh_summ: i32 = tuple_sum(kortesh);
+    println!("Принимает кортеж из двух целых чисел {}, {}. Возвращает целое число, равное сумме чисел во входном кортеже,{kortesh_summ} ",kortesh.0, kortesh.1);
 }
 
-fn tuple_sum(a: i32, b: i32) -> i32 {
-    a + b
+fn tuple_sum(kortesh: (i32, i32)) -> i32 {
+    (kortesh.0 + kortesh.1) as i32
 }
+// TASK7: похожая проблема как и в TASK5/TASK6. Не нужно в main раскладывать кортеж, функция должна принять кортеж в аргументах.
