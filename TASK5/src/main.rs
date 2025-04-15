@@ -3,15 +3,11 @@
 fn main() {
     let a: f32 = 5.1;
     let b: i32 = 9;
-    let b1: f32 = int_plus_float_to_float_b(b);
-    let c: f64 = int_plus_float_to_float_c(a, b1);
-    println!("Принимает 32-х битное число {} с плавающей точкой и принимает 32-х битное целое знаковое число {} возвращает 64-х битное число с плавающей точкой {} равное сумме входных", a, b, c);
+   let summ = int_plus_float_to_float(a,b);
+       println!("Принимает 32-х битное число {a} с плавающей точкой и принимает 32-х битное целое знаковое число {b} возвращает 64-х битное число с плавающей точкой {summ} равное сумме входных");
 }
 
-fn int_plus_float_to_float_b(b: i32) -> f32 {
-    (b as f32).into()
+fn int_plus_float_to_float(a: f32, b: i32)-> f64 {
+    (a+(b as f32)) as f64
 }
 
-fn int_plus_float_to_float_c(a: f32, b1: f32) -> f64 {
-    (a as f32 + b1 as f32).into()
-}
