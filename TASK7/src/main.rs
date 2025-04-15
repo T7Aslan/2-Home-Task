@@ -9,4 +9,4 @@ fn main() {
 fn tuple_sum(kortesh: (i32, i32)) -> i32 {
     (kortesh.0 + kortesh.1) as i32
 }
-// TASK7: похожая проблема как и в TASK5/TASK6. Не нужно в main раскладывать кортеж, функция должна принять кортеж в аргументах.
+
